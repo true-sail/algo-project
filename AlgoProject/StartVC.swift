@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StartVC: UIViewController {
 
     let blackCards = [0,1,2,3,4,5,6,7,8,9,10,11]
     
@@ -21,9 +21,8 @@ class ViewController: UIViewController {
        
     }
 
-  
     @IBAction func didStartGameButton(_ sender: UIButton) {
-        
+    
         var count = 0
         
         while count <= 3 {
@@ -57,8 +56,20 @@ class ViewController: UIViewController {
              }
             
         }
+        performSegue(withIdentifier: "toQuestion", sender: blackNums)
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         // 矢印の名前がtoNextの場合
+    
+         if segue.identifier == "toQuestion" {
+             
+             // QuestionVCのプログラムを取得
+              let QVC = segue.destination as! QuestionVC
+            
+              QVC.blackNums = sender as! Array<Int>
+          }
+      }
 }
 

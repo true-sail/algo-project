@@ -9,7 +9,8 @@
 import UIKit
 
 class QuestionVC: UIViewController {
-
+    var blackNums: Array<Int> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
