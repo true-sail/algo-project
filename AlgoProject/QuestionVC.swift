@@ -19,6 +19,9 @@ class QuestionVC: UIViewController {
     
     @IBOutlet weak var label4: UILabel!
     
+   
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,6 +41,8 @@ class QuestionVC: UIViewController {
         label4.backgroundColor = .black
        
     }
+    
+
     
        
     
