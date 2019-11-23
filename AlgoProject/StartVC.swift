@@ -25,7 +25,7 @@ class StartVC: UIViewController {
     
         var count = 0
         
-        while count <= 4 {
+        while count < 4 {
             let randomB = arc4random_uniform(UInt32(blackCards.count))
         
             blackNums.append(Int(randomB))
