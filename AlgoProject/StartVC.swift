@@ -25,49 +25,33 @@ class StartVC: UIViewController {
     
         var count = 0
         
-        while count <= 3 {
+        while count <= 4 {
             let randomB = arc4random_uniform(UInt32(blackCards.count))
         
-       print(randomB)
             blackNums.append(Int(randomB))
             if blackNums[0] == 12 {
                 blackNums.removeFirst()
             }
-            print(blackNums)
             count += 1
         }
         
-        if blackNums[0] == blackNums[1] || blackNums[0] == blackNums[2] || blackNums[0] == blackNums[3] || blackNums[1] == blackNums[2] || blackNums[1] == blackNums[3] || blackNums[2] == blackNums[3] {
-            
-            blackNums = [12]
-            
-            var count = 0
-             
-             while count <= 3 {
-                 let randomB = arc4random_uniform(UInt32(blackCards.count))
-             
-            print(randomB)
-                 blackNums.append(Int(randomB))
-                 if blackNums[0] == 12 {
-                     blackNums.removeFirst()
-                 }
-                 print(blackNums)
-                 count += 1
-             }
-            
-        }
-        performSegue(withIdentifier: "toQuestion", sender: blackNums)
+
+        // 配列から重複している数字を削除
+        let orderedSet: NSOrderedSet = NSOrderedSet(array: blackNums)
         
+        // 再度Arrayに戻す
+        blackNums = orderedSet.array as! Array<Int>
+        
+        performSegue(withIdentifier: "toQuestion", sender: blackNums)
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
          // 矢印の名前がtoNextの場合
-    
-         if segue.identifier == "toQuestion" {
-             
+        if segue.identifier == "toQuestion" {
              // QuestionVCのプログラムを取得
               let QVC = segue.destination as! QuestionVC
-            
+            // 送る値を設定
               QVC.blackNums = sender as! Array<Int>
           }
       }
