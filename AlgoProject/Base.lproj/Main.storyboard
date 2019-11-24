@@ -70,9 +70,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <state key="normal" title="↑"/>
-                                <connections>
-                                    <segue destination="Oeo-Wu-IGb" kind="show" id="a76-NP-jlV"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7B-xJ-cAP">
                                 <rect key="frame" x="141" y="462" width="36" height="66"/>
