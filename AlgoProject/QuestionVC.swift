@@ -10,6 +10,7 @@ import UIKit
 
 class QuestionVC: UIViewController {
     var blackNums: Array<Int> = []
+    var answer: Int = 12
     
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var label2: UILabel!
@@ -35,7 +36,35 @@ class QuestionVC: UIViewController {
 //        label3.backgroundColor = .black
 //        label4.backgroundColor = .black
        
+        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+//        if blackNums[0] == answer {
+//            label1.text
+//        }
+//        for i in 0...3 {
+//            if blackNums[i] == answer {
+//
+//            }
+//        }
+        
+        switch answer {
+        case blackNums[0]:
+            label1.textColor = .white
+        case blackNums[1]:
+            label2.textColor = .white
+        case blackNums[2]:
+            label3.textColor = .white
+        case blackNums[3]:
+            label4.textColor = .white
+        default:
+            print("ハズレ")
+        }
+    }
+    
+    
     
 
     @IBAction func didChooseCard1(_ sender: UIButton) {
@@ -61,9 +90,10 @@ class QuestionVC: UIViewController {
            // QuestionVCのプログラムを取得
             let AVC = segue.destination as! AnswerVC
         
-        var answer: Int
+        var cardNum: Int
         
-        AVC.answer = sender as! Int
+        AVC.cardNum = sender as! Int
+        AVC.blackNums = blackNums as! Array<Int>
         }
     }
 

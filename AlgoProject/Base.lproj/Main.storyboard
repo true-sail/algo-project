@@ -41,7 +41,7 @@
             <objects>
                 <viewController id="24Y-nJ-js7" customClass="QuestionVC" customModule="AlgoProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oNk-t4-Akd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XuN-jw-uCL">
@@ -123,14 +123,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jl8-eU-aXX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1330.4347826086957" y="-7.3660714285714279"/>
+            <point key="canvasLocation" x="1325" y="-10"/>
         </scene>
         <!--AnswerVC-->
         <scene sceneID="W53-TN-Iue">
             <objects>
                 <viewController id="Oeo-Wu-IGb" customClass="AnswerVC" customModule="AlgoProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mfo-Xe-Xub">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="このカードの数字は" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQJ-Bv-WxF">
@@ -153,11 +153,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gxz-fi-VEg">
+                                <rect key="frame" x="174" y="705" width="67" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="決定"/>
+                                <connections>
+                                    <action selector="didClickAnswerButton:" destination="Oeo-Wu-IGb" eventType="touchUpInside" id="AYw-gX-Crg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Qa8-RW-dF0"/>
                     </view>
                     <navigationItem key="navigationItem" id="mnV-6k-9fL"/>
+                    <connections>
+                        <outlet property="textField" destination="AFs-1B-Fbx" id="MAE-6E-x1M"/>
+                        <segue destination="24Y-nJ-js7" kind="show" identifier="backToQuestion" id="6C1-0K-q9f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rSS-Mc-qwX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -182,4 +195,8 @@
             <point key="canvasLocation" x="-278.26086956521743" y="-7.3660714285714279"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="1YD-c1-g3y"/>
+        <segue reference="6C1-0K-q9f"/>
+    </inferredMetricsTieBreakers>
 </document>

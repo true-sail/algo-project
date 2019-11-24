@@ -10,15 +10,46 @@ import UIKit
 
 class AnswerVC: UIViewController {
     // 飛んできた値を受け取る
-    var answer = Int()
+    var cardNum = Int()
+    var blackNums: Array<Int> = []
     
+    @IBOutlet weak var textField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(answer)
+        print("-------------------")
+        print(blackNums)
+        print("-------------------")
+        print(cardNum)
+        
+        
     }
     
-
     
 
+    @IBAction func didClickAnswerButton(_ sender: UIButton) {
+       
+        let answer = Int(textField.text!)
+        print(answer!)
+        
+        if cardNum == answer {
+            performSegue(withIdentifier: "backToQuestion", sender: answer)
+        } else {
+            performSegue(withIdentifier: "backToQuestion", sender: 12)
+        }
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "backToQuestion" {
+            let QVC = segue.destination as! QuestionVC
+            
+            QVC.answer = sender as! Int
+            // 送る値を設定
+              QVC.blackNums = blackNums as! Array<Int>
+          }
+      }
+
 }
+
+
