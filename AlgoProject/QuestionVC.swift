@@ -12,6 +12,12 @@ class QuestionVC: UIViewController {
     var blackNums: Array<Int> = []
     var answer: Int = 12
     
+    var isTrue1 = false
+    var isTrue2 = false
+    var isTrue3 = false
+    var isTrue4 = false
+    
+    
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var label3: UILabel!
@@ -30,38 +36,57 @@ class QuestionVC: UIViewController {
         label2.text = "\(blackNums[1])"
         label3.text = "\(blackNums[2])"
         label4.text = "\(blackNums[3])"
-//
-//        label1.backgroundColor = .black
-//        label2.backgroundColor = .black
-//        label3.backgroundColor = .black
-//        label4.backgroundColor = .black
+
+        label1.backgroundColor = .black
+        label2.backgroundColor = .black
+        label3.backgroundColor = .black
+        label4.backgroundColor = .black
        
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
-//        if blackNums[0] == answer {
-//            label1.text
-//        }
-//        for i in 0...3 {
-//            if blackNums[i] == answer {
-//
-//            }
-//        }
+        
+        isTrue1 = UserDefaults.standard.bool(forKey: "card1")
+        isTrue2 = UserDefaults.standard.bool(forKey: "card2")
+        isTrue3 = UserDefaults.standard.bool(forKey: "card3")
+        isTrue4 = UserDefaults.standard.bool(forKey: "card4")
+        
+        if isTrue1 {
+            label1.textColor = .white
+        }
+        if isTrue2 {
+            label2.textColor = .white
+        }
+        if isTrue3 {
+            label3.textColor = .white
+        }
+        if isTrue4 {
+            label4.textColor = .white
+        }
         
         switch answer {
         case blackNums[0]:
             label1.textColor = .white
+            isTrue1 = true
+            UserDefaults.standard.set(self.isTrue1, forKey: "card1")
         case blackNums[1]:
             label2.textColor = .white
+            isTrue2 = true
+            UserDefaults.standard.set(self.isTrue2, forKey: "card2")
         case blackNums[2]:
             label3.textColor = .white
+            isTrue3 = true
+            UserDefaults.standard.set(self.isTrue3, forKey: "card3")
         case blackNums[3]:
             label4.textColor = .white
+            isTrue4 = true
+            UserDefaults.standard.set(self.isTrue4, forKey: "card4")
         default:
             print("ハズレ")
         }
+        
     }
     
     

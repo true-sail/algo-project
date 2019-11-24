@@ -18,6 +18,8 @@ class StartVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
        
     }
 
@@ -40,6 +42,11 @@ class StartVC: UIViewController {
     }
     
     @IBAction func didStartGameButton(_ sender: UIButton) {
+        
+        // ユーザーデフォルトをリセット
+        if let bundleId = Bundle.main.bundleIdentifier {
+            UserDefaults.standard.removePersistentDomain(forName: bundleId)
+        }
         
         getArray()
         
