@@ -35,6 +35,7 @@ class AnswerVC: UIViewController {
         if cardNum == answer {
             performSegue(withIdentifier: "backToQuestion", sender: answer)
         } else {
+            score -= 10
             performSegue(withIdentifier: "backToQuestion", sender: 12)
         }
     }

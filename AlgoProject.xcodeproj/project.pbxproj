@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		173DA9EF238A8DF1009949AD /* ResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173DA9EE238A8DF1009949AD /* ResultVC.swift */; };
 		1749AC6123899A6300245338 /* AnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1749AC6023899A6300245338 /* AnswerVC.swift */; };
 		17F32E0B23890F9E0007D2CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F32E0A23890F9E0007D2CA /* AppDelegate.swift */; };
 		17F32E0D23890F9E0007D2CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F32E0C23890F9E0007D2CA /* SceneDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		173DA9EE238A8DF1009949AD /* ResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultVC.swift; sourceTree = "<group>"; };
 		1749AC6023899A6300245338 /* AnswerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerVC.swift; sourceTree = "<group>"; };
 		17F32E0723890F9E0007D2CA /* AlgoProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlgoProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17F32E0A23890F9E0007D2CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				17F32E1E23890FD30007D2CA /* QuestionVC.swift */,
 				17F32E24238948AE0007D2CA /* StartVC.swift */,
 				1749AC6023899A6300245338 /* AnswerVC.swift */,
+				173DA9EE238A8DF1009949AD /* ResultVC.swift */,
 			);
 			path = AlgoProject;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17F32E1F23890FD30007D2CA /* QuestionVC.swift in Sources */,
+				173DA9EF238A8DF1009949AD /* ResultVC.swift in Sources */,
 				17F32E0B23890F9E0007D2CA /* AppDelegate.swift in Sources */,
 				1749AC6123899A6300245338 /* AnswerVC.swift in Sources */,
 				17F32E0D23890F9E0007D2CA /* SceneDelegate.swift in Sources */,

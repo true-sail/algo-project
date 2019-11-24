@@ -12,8 +12,6 @@ class StartVC: UIViewController {
 
     let blackCards = [0,1,2,3,4,5,6,7,8,9,10,11]
     
-    let whiteCards = [0,1,2,3,4,5,6,7,8,9,10,11]
-    
     var blackNums = [12]
     
     override func viewDidLoad() {

@@ -8,6 +8,8 @@
 
 import UIKit
 
+var score = 1000
+
 class QuestionVC: UIViewController {
     var blackNums: Array<Int> = []
     var answer: Int = 12
@@ -87,6 +89,10 @@ class QuestionVC: UIViewController {
             print("ハズレ")
         }
         
+        if isTrue1 == true && isTrue2 == true && isTrue3 == true && isTrue4 == true {
+            performSegue(withIdentifier: "toResult", sender: score)
+        }
+        
     }
     
     
@@ -118,7 +124,11 @@ class QuestionVC: UIViewController {
         var cardNum: Int
         
         AVC.cardNum = sender as! Int
+        
         AVC.blackNums = blackNums as! Array<Int>
+      } else if segue.identifier == "toResult" {
+        let RVC = segue.destination as! ResultVC
+        RVC.score = sender as! Int
         }
     }
 
