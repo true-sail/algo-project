@@ -41,14 +41,10 @@ class StartVC: UIViewController {
     
     @IBAction func didStartGameButton(_ sender: UIButton) {
         
-        
         getArray()
         
-//        if blackNums.count == 4 {
         performSegue(withIdentifier: "toQuestion", sender: blackNums)
-//        } else {
-//            getArray()
-//        }
+
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

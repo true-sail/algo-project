@@ -9,14 +9,16 @@
 import UIKit
 
 class AnswerVC: UIViewController {
-
+    // 飛んできた値を受け取る
+    var answer = Int()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(answer)
     }
     
-    
 
-   
+    
 
 }

@@ -38,8 +38,33 @@ class QuestionVC: UIViewController {
     }
     
 
+    @IBAction func didChooseCard1(_ sender: UIButton) {
+        performSegue(withIdentifier: "toAnswer", sender: blackNums[0])
+    }
     
-       
+    @IBAction func didChooseCard2(_ sender: UIButton) {
+        performSegue(withIdentifier: "toAnswer", sender: blackNums[1])
+    }
     
-}
+    @IBAction func didChooseCard3(_ sender: UIButton) {
+        performSegue(withIdentifier: "toAnswer", sender: blackNums[2])
+    }
+    
+    @IBAction func didChooseCard4(_ sender: UIButton) {
+        performSegue(withIdentifier: "toAnswer", sender: blackNums[3])
+    }
+    
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       // 矢印の名前がtoNextの場合
+      if segue.identifier == "toAnswer" {
+           // QuestionVCのプログラムを取得
+            let AVC = segue.destination as! AnswerVC
+        
+        var answer: Int
+        
+        AVC.answer = sender as! Int
+        }
+    }
+
+}
