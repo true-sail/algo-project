@@ -20,7 +20,10 @@ var score: Int = 0
         
         scoreLabel.text = "\(score)"
         
-        if 700 <= score {
+        if score == 1000 {
+            commentLabel.text = "人間の域を超えていますね..."
+            commentLabel.textColor = .red
+        } else if 700 <= score {
             commentLabel.text = "天才！"
             commentLabel.textColor = .orange
         } else if 400 <= score && score < 700 {

@@ -16,9 +16,11 @@
 		17F32E1723890FA00007D2CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17F32E1523890FA00007D2CA /* LaunchScreen.storyboard */; };
 		17F32E1F23890FD30007D2CA /* QuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F32E1E23890FD30007D2CA /* QuestionVC.swift */; };
 		17F32E25238948AE0007D2CA /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F32E24238948AE0007D2CA /* StartVC.swift */; };
+		8EAFCC287961E1106324B711 /* Pods_AlgoProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE21F0075F4E35D1DDC1C0BE /* Pods_AlgoProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DF94EF252E7BB45340F1CE9 /* Pods-AlgoProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlgoProject.debug.xcconfig"; path = "Target Support Files/Pods-AlgoProject/Pods-AlgoProject.debug.xcconfig"; sourceTree = "<group>"; };
 		173DA9EE238A8DF1009949AD /* ResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultVC.swift; sourceTree = "<group>"; };
 		1749AC6023899A6300245338 /* AnswerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerVC.swift; sourceTree = "<group>"; };
 		17F32E0723890F9E0007D2CA /* AlgoProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlgoProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,6 +32,8 @@
 		17F32E1823890FA00007D2CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17F32E1E23890FD30007D2CA /* QuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVC.swift; sourceTree = "<group>"; };
 		17F32E24238948AE0007D2CA /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
+		C8C9C59C2EB51A474A1A6080 /* Pods-AlgoProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlgoProject.release.xcconfig"; path = "Target Support Files/Pods-AlgoProject/Pods-AlgoProject.release.xcconfig"; sourceTree = "<group>"; };
+		FE21F0075F4E35D1DDC1C0BE /* Pods_AlgoProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlgoProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EAFCC287961E1106324B711 /* Pods_AlgoProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +53,8 @@
 			children = (
 				17F32E0923890F9E0007D2CA /* AlgoProject */,
 				17F32E0823890F9E0007D2CA /* Products */,
+				CD1E78C7DD6AB7A51D85E14D /* Pods */,
+				8B380C160AFC5D52F0E038BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +83,24 @@
 			path = AlgoProject;
 			sourceTree = "<group>";
 		};
+		8B380C160AFC5D52F0E038BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE21F0075F4E35D1DDC1C0BE /* Pods_AlgoProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD1E78C7DD6AB7A51D85E14D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0DF94EF252E7BB45340F1CE9 /* Pods-AlgoProject.debug.xcconfig */,
+				C8C9C59C2EB51A474A1A6080 /* Pods-AlgoProject.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17F32E1B23890FA00007D2CA /* Build configuration list for PBXNativeTarget "AlgoProject" */;
 			buildPhases = (
+				A61E1C8973EE1143849F6703 /* [CP] Check Pods Manifest.lock */,
 				17F32E0323890F9E0007D2CA /* Sources */,
 				17F32E0423890F9E0007D2CA /* Frameworks */,
 				17F32E0523890F9E0007D2CA /* Resources */,
+				E88BA5D6E3271DC6C0B5CB6E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,6 +168,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A61E1C8973EE1143849F6703 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlgoProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E88BA5D6E3271DC6C0B5CB6E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlgoProject/Pods-AlgoProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlgoProject/Pods-AlgoProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlgoProject/Pods-AlgoProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		17F32E0323890F9E0007D2CA /* Sources */ = {
@@ -294,6 +363,7 @@
 		};
 		17F32E1C23890FA00007D2CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DF94EF252E7BB45340F1CE9 /* Pods-AlgoProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -312,6 +382,7 @@
 		};
 		17F32E1D23890FA00007D2CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8C9C59C2EB51A474A1A6080 /* Pods-AlgoProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

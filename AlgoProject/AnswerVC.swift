@@ -22,6 +22,8 @@ class AnswerVC: UIViewController {
         print("-------------------")
         print(cardNum)
         
+        // 数字のキーボード
+        self.textField.keyboardType = UIKeyboardType.numberPad
         
     }
     
@@ -35,7 +37,7 @@ class AnswerVC: UIViewController {
         if cardNum == answer {
             performSegue(withIdentifier: "backToQuestion", sender: answer)
         } else {
-            score -= 10
+            score -= 50
             performSegue(withIdentifier: "backToQuestion", sender: 12)
         }
     }
