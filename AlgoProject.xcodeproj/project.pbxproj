@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -97,7 +97,6 @@
 				0DF94EF252E7BB45340F1CE9 /* Pods-AlgoProject.debug.xcconfig */,
 				C8C9C59C2EB51A474A1A6080 /* Pods-AlgoProject.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
