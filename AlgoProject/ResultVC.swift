@@ -20,18 +20,18 @@ var score: Int = 0
         
         scoreLabel.text = "\(score)"
         
-        if score == 1000 {
+        if score == 100 {
             commentLabel.text = "人間の域を超えていますね..."
             commentLabel.textColor = .red
-        } else if 700 <= score {
+        } else if 70 <= score {
             commentLabel.text = "天才！"
             commentLabel.textColor = .orange
-        } else if 400 <= score && score < 700 {
+        } else if 40 <= score && score < 70 {
             commentLabel.text = "すごい！"
-            commentLabel.textColor = .yellow
-        } else if 100 <= score && score < 400 {
+            commentLabel.textColor = .orange
+        } else if 10 <= score && score < 40 {
             commentLabel.text = "まあまあだね"
-            commentLabel.textColor = .green
+            commentLabel.textColor = .blue
         } else if  score < 0 {
             commentLabel.text = "悲惨だね..."
             commentLabel.textColor = .purple

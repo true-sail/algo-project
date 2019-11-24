@@ -12,6 +12,7 @@ class AnswerVC: UIViewController {
     // 飛んできた値を受け取る
     var cardNum = Int()
     var blackNums: Array<Int> = []
+    var myCards: Array<Int> = []
     
     @IBOutlet weak var textField: UITextField!
     
@@ -37,7 +38,7 @@ class AnswerVC: UIViewController {
         if cardNum == answer {
             performSegue(withIdentifier: "backToQuestion", sender: answer)
         } else {
-            score -= 50
+            score -= 10
             performSegue(withIdentifier: "backToQuestion", sender: 12)
         }
     }
@@ -49,7 +50,8 @@ class AnswerVC: UIViewController {
             
             QVC.answer = sender as! Int
             // 送る値を設定
-              QVC.blackNums = blackNums as! Array<Int>
+            QVC.blackNums = blackNums as! Array<Int>
+            QVC.myCards = myCards as! Array<Int>
           }
       }
 

@@ -8,11 +8,13 @@
 
 import UIKit
 
-var score = 1000
+var score = 100
 
 class QuestionVC: UIViewController {
     var blackNums: Array<Int> = []
+    var myCards: Array<Int> = []
     var answer: Int = 12
+    
     
     var isTrue1 = false
     var isTrue2 = false
@@ -25,14 +27,17 @@ class QuestionVC: UIViewController {
     @IBOutlet weak var label3: UILabel!
     @IBOutlet weak var label4: UILabel!
     
-
+    @IBOutlet weak var myCardsLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+              
         // 配列blackNumsを昇順に並び替える
         // このクラス内にあるblackNumsを使うからselfをつける
          self.blackNums.sort {$0 < $1}
         print(blackNums)
+        self.myCards.sort {$0 < $1}
+        print(myCards)
 
         label1.text = "\(blackNums[0])"
         label2.text = "\(blackNums[1])"
@@ -48,6 +53,8 @@ class QuestionVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        myCardsLabel.text = "\(myCards)です。"
         
         
         isTrue1 = UserDefaults.standard.bool(forKey: "card1")
@@ -124,8 +131,8 @@ class QuestionVC: UIViewController {
         var cardNum: Int
         
         AVC.cardNum = sender as! Int
-        
         AVC.blackNums = blackNums as! Array<Int>
+        AVC.myCards = myCards as! Array<Int>
       } else if segue.identifier == "toResult" {
         let RVC = segue.destination as! ResultVC
         RVC.score = sender as! Int
