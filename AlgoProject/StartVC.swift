@@ -23,7 +23,7 @@ class StartVC: UIViewController {
     }
 
     fileprivate func getArray() {
-        print(blackNums.count)
+       
         while blackNums.count < 8 {
             let randomB = arc4random_uniform(UInt32(blackCards.count))
             
@@ -82,8 +82,7 @@ class StartVC: UIViewController {
         // 再度Arrayに戻す
         blackNums = orderedSet.array as! Array<Int>
         }
-        print("blackNumsの数")
-        print(blackNums)
+  
         
         for i in 1...4 {
         myCards.append(blackNums[i])
@@ -93,18 +92,7 @@ class StartVC: UIViewController {
         blackNums.remove(at: i)
         }
     
-        
-//        for i in 0...3 {
-//                       myCards.append(Int(blackNums[i]))
-//
-//                   if myCards[0] == 12 {
-//                       myCards.removeFirst()
-//                   }
-//        }
-        
-      
-        
-        
+         
         print("新しいblackNumsの数字")
         print(blackNums)
         print("myCardsの数字")

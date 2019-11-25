@@ -18,9 +18,9 @@ class AnswerVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("-------------------")
+        print("blackNumsの数字")
         print(blackNums)
-        print("-------------------")
+        print("cardNumの数字")
         print(cardNum)
         
         // 数字のキーボード
@@ -33,7 +33,6 @@ class AnswerVC: UIViewController {
     @IBAction func didClickAnswerButton(_ sender: UIButton) {
        
         let answer = Int(textField.text!)
-        print(answer!)
         
         if cardNum == answer {
             performSegue(withIdentifier: "backToQuestion", sender: answer)

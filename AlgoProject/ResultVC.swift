@@ -26,10 +26,10 @@ var score: Int = 0
         } else if 70 <= score {
             commentLabel.text = "天才！"
             commentLabel.textColor = .orange
-        } else if 40 <= score && score < 70 {
+        } else if 50 <= score && score < 70 {
             commentLabel.text = "すごい！"
             commentLabel.textColor = .orange
-        } else if 10 <= score && score < 40 {
+        } else if 10 <= score && score < 50 {
             commentLabel.text = "まあまあだね"
             commentLabel.textColor = .blue
         } else if  score < 0 {

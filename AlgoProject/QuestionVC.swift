@@ -35,9 +35,12 @@ class QuestionVC: UIViewController {
         // 配列blackNumsを昇順に並び替える
         // このクラス内にあるblackNumsを使うからselfをつける
          self.blackNums.sort {$0 < $1}
+        print("blackNumsの数")
         print(blackNums)
+       
         self.myCards.sort {$0 < $1}
         print(myCards)
+        print("myCardsの数")
 
         label1.text = "\(blackNums[0])"
         label2.text = "\(blackNums[1])"

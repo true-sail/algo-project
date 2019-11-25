@@ -35,12 +35,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Yid-3c-XGn">
-                                <rect key="frame" x="50" y="377" width="315" height="216"/>
+                                <rect key="frame" x="43" y="365" width="329" height="228"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.88546673907539886" green="0.97305089235305786" blue="0.41255656762655007" alpha="0.13163527397260275" colorSpace="custom" customColorSpace="displayP3"/>
-                                <string key="text">0~11の数字が　　　　　　　　　書かれたカードのうち、　　　　　　4枚だけが左から右へ　　　　　　　　　　小さい順に並べられるよ。　　　　　　　　　　　　　　                                                    それぞれのカードの数字を　　　出来るだけ少ない回数で　　　　当ててみよう！</string>
+                                <string key="text">0~11の数字が　　　　　　　　　書かれたカードのうち、　　　　　　4枚だけが左から右へ　　　　　　　　　　小さい順に並べられるよ。                自分のカードの数字を見ながら、　　　　　　　　　　　　　　                                                    それぞれのカードの数字を　　　出来るだけ少ない回数で　　　　当ててみよう！</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="23"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
